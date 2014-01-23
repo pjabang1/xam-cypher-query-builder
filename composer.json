@@ -1,0 +1,30 @@
+{
+    "name": "pjabang1/xam-unsplash-image-downloader",
+    "description": "A php ",
+    "keywords": ["PHP Cypher", "Query Builder", "Php"],
+    "homepage": "https://github.com/pjabang1/xam-cypher-query-builder/wiki",
+    "type": "query-builder",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pa Essa Jabang",
+            "email": "pjabang@gmail.com",
+            "homepage": "http://pjabang.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.1"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-0": {
+            "Xam\\Cypher": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.1.x-dev"
+        }
+    }
+}
