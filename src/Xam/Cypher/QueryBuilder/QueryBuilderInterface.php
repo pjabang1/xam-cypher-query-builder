@@ -7,13 +7,14 @@ namespace Xam\Cypher\QueryBuilder;
  * 
  */
 
-interface QueryBuilderInterface {
+interface QueryBuilderInterface extends AbstractQ {
 
     /**
      * 
-     * @param array $parameters
+     * @param string $table
+     * @param array $data
      */
-    public function build($parameters);
+    public function build($table, $data);
 }
 
 ?>
