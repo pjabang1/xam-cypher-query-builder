@@ -9,10 +9,10 @@
          processIsolation="false"
          stopOnFailure="false"
          syntaxCheck="false"
-         bootstrap="./vendor/autoload.php">
+         testSuiteLoaderClass="PHPUnit_Runner_StandardTestSuiteLoader">
     <testsuites>
         <testsuite name="Cypher Query Builder">
-            <directory>./tests</directory>
+            <directory>./tests/Xam/Tests</directory>
         </testsuite>
     </testsuites>
 </phpunit>
