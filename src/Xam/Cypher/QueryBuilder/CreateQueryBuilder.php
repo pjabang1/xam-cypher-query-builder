@@ -19,7 +19,7 @@ class CreateQueryBuilder extends AbstractQueryBuilder {
         $data = $this->getData($parameters['data']);
         
         $label = $this->getLabel($table, $data);
-        $line = json_decode($data);
+        $line = json_encode($data);
         return 'CREATE (' . $label . ' ' . $line . ');';
     }
     
