@@ -15,12 +15,18 @@ class CreateQueryBuilder extends AbstractQueryBuilder {
      * @return string CREATE (me:American {name: "Emil"}) RETURN me;
      */
     public function build($parameters) {
+        
         $table = $parameters['table'];
         $data = $this->getData($parameters['data']);
+
         
         $label = $this->getLabel($table, $data);
         $line = $this->jsonEncode($data);
-        return 'CREATE (' . $label . ' ' . $line . ');';
+        
+        $query = 'CREATE (' . $label . ' ' . $line . ')' . "\n";
+        $query .= "RETURN {$data['id']};\n";
+        
+        return $query;
     }
     
    
