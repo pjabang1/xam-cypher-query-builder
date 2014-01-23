@@ -54,6 +54,7 @@ abstract class AbstractQueryBuilder {
             }
         }
         $return .= '}';
+        return $return;
     }
 
 }
