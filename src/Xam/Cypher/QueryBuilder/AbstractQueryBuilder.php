@@ -36,6 +36,25 @@ abstract class AbstractQueryBuilder {
         }
         return $data;
     }
+    
+    public function jsonEncode($data) {
+        $return = '{';
+        if($data) {
+            foreach($data AS $key => $value) {
+                if(is_array($value)) {
+                    
+                } else {
+                    if($return != '{') {
+                        $return .= ', ';
+                    }
+                   
+                     $return .= $key . ':' . '\'' . $value . '\'';
+                            
+                }
+            }
+        }
+        $return .= '}';
+    }
 
 }
 
