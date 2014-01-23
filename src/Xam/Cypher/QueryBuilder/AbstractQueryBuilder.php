@@ -37,6 +37,11 @@ abstract class AbstractQueryBuilder {
         return $data;
     }
     
+    /**
+     * 
+     * @param type $data
+     * @return string
+     */
     public function jsonEncode($data) {
         $return = '{';
         if($data) {
