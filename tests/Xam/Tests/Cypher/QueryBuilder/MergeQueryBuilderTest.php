@@ -4,9 +4,9 @@ namespace Xam\Tests\Cypher\QueryBuilder;
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-use Xam\Cypher\QueryBuilder\CreateQueryBuilder;
+use Xam\Cypher\QueryBuilder\MergeQueryBuilder;
 
-class CreateQueryBuilderTest extends \PHPUnit_Framework_TestCase {
+class MergeQueryBuilderTest extends \PHPUnit_Framework_TestCase {
     
     private $queryBuilder;
 
@@ -14,7 +14,7 @@ class CreateQueryBuilderTest extends \PHPUnit_Framework_TestCase {
      * 
      */
     public function setUp() {
-        $this->queryBuilder = new CreateQueryBuilder();
+        $this->queryBuilder = new MergeQueryBuilder();
     }
     
     public function testCreateQueryBuilder() {
@@ -26,7 +26,7 @@ class CreateQueryBuilderTest extends \PHPUnit_Framework_TestCase {
             )
         );
         
-        $expect = "CREATE (animals:Vertical {id:'animals', name:'Animals'})\nRETURN animals;\n";
+        $expect = "MERGE (animals:Vertical {id:'animals', name:'Animals'})\nRETURN animals;\n";
         
         $this->assertEquals($expect, $this->queryBuilder->build($parameters));
     }
